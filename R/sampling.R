@@ -6,7 +6,7 @@ sampling <- function(bounds, n)
     if(missing(n)){
         n = 1000000
     }
-    dim = checkdim(bounds)
+    dim = check_dim(bounds)
     rand = c()
     i = 0
     while(dim>i){

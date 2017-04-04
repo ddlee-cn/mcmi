@@ -1,6 +1,5 @@
 # checkintegrand.R
 # check whether integrand qualified to be integrated
-#' @export
 check_integrand <- function(integrand)
 {
     x=1

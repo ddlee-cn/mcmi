@@ -2,7 +2,7 @@
 % Please edit documentation in R/mcmi.R
 \name{mcmi}
 \alias{mcmi}
-\title{MCMI}
+\title{Monte Carlo Method for Multivariable Integration}
 \usage{
 mcmi(bounds, integrand, constrains, n)
 }
@@ -16,7 +16,7 @@ mcmi(bounds, integrand, constrains, n)
 \item{n:}{number of random points, default 1,000,000,}
 }
 \description{
-Calculate multivariable integration using Monte Carlo method
+Calculate multivariable integration using Monte Carlo method, only support up to 3D currently, accuracy 0.005
 }
 \examples{
 mcmi(c(-1,1, -1,1), 1, "x^2+y^2<1")

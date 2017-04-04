@@ -1,6 +1,6 @@
-#' MCMI
+#' Monte Carlo Method for Multivariable Integration
 #'
-#' Calculate multivariable integration using Monte Carlo method
+#' Calculate multivariable integration using Monte Carlo method, only support up to 3D currently, accuracy 0.005
 #'
 #' @param bounds: necessary, the bounds of x, y, z, as a vector of 2, 4 or 6 dimensions
 #' @param integrand: optional, the integrand, input as character, must contains x, y, or z,   default: 1

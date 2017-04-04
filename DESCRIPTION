@@ -3,7 +3,7 @@ Type: Package
 Title: Monte Carlo Method for Multivariable Integration
 Version: 0.1.0
 Author@R: person("David", "Lee", email = "cnlijiacheng96@gmail.com", role = c("aut", "cre"))
-Description: An implemention of monte carlo method for multicariable integration.
+Description: An implemention of monte carlo method for multicariable integration. Only support up to 3D currently.
 Depends: R(>= 3.1.0)
 License: GPL-2
 Encoding: UTF-8

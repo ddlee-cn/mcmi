@@ -2,16 +2,20 @@
 #'
 #' Calculate multivariable integration using Monte Carlo method
 #'
-#' @param Bounds: the bounds of x, y, z, as a vector of 2, 4 or 6 dimensions
-#' @param Integrand: the integrand, default: 1
-#' @param Constrains: inequalities that x, y, z must satisfy, default: 1
+#' @param bounds: necessary, the bounds of x, y, z, as a vector of 2, 4 or 6 dimensions
+#' @param integrand: optional, the integrand, input as character, must contains x, y, or z,   default: 1
+#' @param constrains: optional, inequalities that x, y, z must satisfy, input as character, must contains x, y, or z, default: 1
 #' @param n: number of random points, default 1,000,000,
 #'
 #' @examples
 #' mcmi(c(-1,1, -1,1), 1, "x^2+y^2<1")
+#' (-1<x<1, -1<y<1)
+#'
 #' mcmi(c(0,1, 1,2, -1,3), 1, c("exp(x)<y", "sin(z)*y>=0")
+#' (0<x<1, 1<y<2, -1<3)
 #'
 #' mcmi(c(0,1), "exp(x)")
+#' (0<x<1)
 #'
 #' @export
 mcmi <- function(bounds, integrand, constrains, n)
@@ -24,8 +28,8 @@ mcmi <- function(bounds, integrand, constrains, n)
     integrand <- check_integrand(integrand)
     constrains <- check_constrains(constrains)
 
-    rands <- sampling(bounds, n)
     area <- calculate_area(bounds)
+    rands <- sampling(bounds, n)
     integration <- calculate(rands, area, integrand, constrains)
 
     return(integration)

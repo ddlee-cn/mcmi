@@ -22,6 +22,8 @@ test_that("test area calculation",
     expect_equal(calculate_area(c(1,2,1.5,2)), 0.5)
     expect_equal(calculate_area(c(1,2,1.5,2,-3,-2.8)), 0.1)
 
+    expect_error(calculate_area(c(2,1)), "less than")
+
 })
 
 test_that("test ingration calculation",

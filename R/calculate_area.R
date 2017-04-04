@@ -7,5 +7,8 @@ calculate_area <- function(bounds)
     for ( i in 1:dim){
         area = area * (bounds[2*i]-bounds[2*i-1])
     }
+    if (area<0){
+        stop("upper bound less than lower bound.")
+    }
     return(area)
 }

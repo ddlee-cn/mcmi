@@ -4,19 +4,28 @@
 \alias{mcmi}
 \title{MCMI}
 \usage{
-mcmi(bounds, integrand, constrains)
+mcmi(bounds, integrand, constrains, n)
 }
 \arguments{
-\item{Bounds:}{the bounds of x, y, z, as a vector of 2, 4 or 6 dimensions}
+\item{bounds:}{necessary, the bounds of x, y, z, as a vector of 2, 4 or 6 dimensions}
 
-\item{Integrand:}{the integrand}
+\item{integrand:}{optional, the integrand, input as character, must contains x, y, or z,   default: 1}
 
-\item{Constrains:}{inequalities that x, y, z must satisfy}
+\item{constrains:}{optional, inequalities that x, y, z must satisfy, input as character, must contains x, y, or z, default: 1}
+
+\item{n:}{number of random points, default 1,000,000,}
 }
 \description{
 Calculate multivariable integration using Monte Carlo method
 }
 \examples{
-mcmi(c(2,3, 3,4), x^2+y^2, x<y)
+mcmi(c(-1,1, -1,1), 1, "x^2+y^2<1")
+(-1<x<1, -1<y<1)
+
+mcmi(c(0,1, 1,2, -1,3), 1, c("exp(x)<y", "sin(z)*y>=0")
+(0<x<1, 1<y<2, -1<3)
+
+mcmi(c(0,1), "exp(x)")
+(0<x<1)
 
 }

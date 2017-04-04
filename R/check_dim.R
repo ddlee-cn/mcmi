@@ -1,5 +1,5 @@
 # check dimension
-checkdim <- function(bounds)
+check_dim <- function(bounds)
 {
     len <- length(bounds)
     if (len%%2!=0 || len>6){

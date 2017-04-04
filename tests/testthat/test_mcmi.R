@@ -1,13 +1,13 @@
 library(testthat)
 library(mcmi)
 
-test_that("test checkdim",
+test_that("test check_dim",
 {
-    expect_equal(checkdim(c(1,2)),  1)
-    expect_equal(checkdim(c(1,2,3,4)), 2)
-    expect_equal(checkdim(c(1,2,3,4,5,6)), 3)
+    expect_equal(check_dim(c(1,2)),  1)
+    expect_equal(check_dim(c(1,2,3,4)), 2)
+    expect_equal(check_dim(c(1,2,3,4,5,6)), 3)
 
-    expect_error(checkdim(c(1,2,3)))
+    expect_error(check_dim(c(1,2,3)))
 })
 
 test_that("verify sampling dimensions",

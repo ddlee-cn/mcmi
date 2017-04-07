@@ -14,7 +14,7 @@ visualize_area <- function(bounds, constrains)
     dim <- check_dim(bounds)
     constrains <- check_constrains(constrains)
 
-    n = 10000
+    n = 5000
     rands <- sampling(bounds, n)
     x <- rands[1,]
     if (dim>1){y <- rands[2,]}
@@ -28,11 +28,11 @@ visualize_area <- function(bounds, constrains)
     }
 
     if (dim==2){
-        p <- plotly::plot_ly(x=x,y=y,color=constrains_eval,colors=c('#BF382A', '#0C4B8E'))
+        p <- plotly::plot_ly(x=x,y=y,color=constrains_eval,marker=list(opacity=0.2,size=3),colors=c("#0083FF","#FF0000"))
         p <- plotly::add_markers(p)
     }
     else if (dim==3){
-        p <- plotly::plot_ly(x=x,y=y,z=z,color=constrains_eval,colors=c('#BF382A', '#0C4B8E'))
+        p <- plotly::plot_ly(x=x,y=y,z=z,color=constrains_eval,marker=list(opacity=0.2,size=3),colors=c("#0083FF","#FF0000"))
         p <- plotly::add_markers(p)
     }
     else {stop("only 2D/3D supported.")}

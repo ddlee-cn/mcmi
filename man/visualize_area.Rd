@@ -15,6 +15,6 @@ visualize_area(bounds, constrains)
 Visualize 2D/3D integration area with random experienments
 }
 \examples{
-visualize_area(c(0,1, 1,2, -1,3), c("exp(x)<y", "sin(z)*y>=0"))
+visualize_area(c(-2,2, -2,2, -1.2,1.2), c("x^2/4+y^2/4+z^2/1<1", "x<y"))
 
 }

@@ -1,6 +1,6 @@
 ### Monte Carlo Method for Multivariable Integration
 
-A toy R package to teach myself the process of developing R packages.
+A toy R package to teach myself the process of developing R packages. Calculate and visualize Multiple Integral using Monte Carlo method. [View Demo](https://ddlee.shinyapps.io/mcmi_online)
 
 #### Installation
 ```r
@@ -10,7 +10,8 @@ devtools::install_github("ddlee96/mcmi")
 
 #### Usage
 ```r
-mcmi(bounds, integrand, constrains, n)
+mcimi::mcmi(bounds, integrand, constrains, n)
+mcmi::visualize(boungds, constrains)
 ```
 ##### Parameters
 - bounds: the interval to calculate integral
